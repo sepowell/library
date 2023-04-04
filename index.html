@@ -11,7 +11,44 @@
 </head>
 
 <body>
-  
+
+  <div class="main-container">
+
+    <div class="title">
+      <h1>My Books Library</h1>
+      <p>This is a project for The Odin Project in which I have to make personal library catalogger using object constructors.</p>
+    </div>
+
+    <div class="add-book-container">
+
+      <form>
+
+        <div>
+          <label for="book">Book:</label>
+          <input type="text" name="book" id="book" />
+        </div>
+
+        <div>
+          <label for="author">Author:</label>
+          <input type="text" name="author" id="author" />
+        </div>
+
+        <div>
+          <label for="status">Status:</label>
+          <select name="status" id="status">
+            <option value="read">Read</option>
+            <option value="not read">Not Read</option>
+          </select>
+        </div>
+
+      </form>
+
+    </div>
+
+    <div class="books-grid"></div>
+
+  </div>
+
 </body>
 
 </html>

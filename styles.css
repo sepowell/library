@@ -12,12 +12,14 @@
   padding: 42px;
 }
 
+/* Title Section */
 .title {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+/* Add Book Area */
 .add-book-container {
   margin-top: 40px;
 }
@@ -45,4 +47,35 @@ select {
   border-radius: 15px;
   font-weight: bold;
   cursor: pointer;
+}
+
+/* Library Grid */
+
+.library-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 150px;
+  gap: 15px;
+  width: 800px;
+  margin-top: 20px;
+}
+
+/* Book Container */
+.book-container {
+  width: 1fr;
+  height: 1fr;
+  padding: 20px;
+  border: 1px solid;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book-title {
+  text-decoration: underline;
+}
+
+.book-author {
+  font-style: italic;
 }

@@ -36,3 +36,13 @@ input,
 select {
   padding: 7px;
 }
+
+.add-book-container > button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #34c3f0;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}

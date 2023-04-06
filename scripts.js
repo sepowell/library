@@ -1,8 +1,15 @@
 let myLibrary = [];
 
-let submitNewBookBtn = document.getElementById('submit-book');
+const submitNewBookBtn = document.getElementById('submit-book');
+const bookContainer = document.querySelector('.library-grid');
 
 submitNewBookBtn.addEventListener('click', addBookToLibrary);
+bookContainer.addEventListener('click', function(e) {
+  if (e.target.classList.contains('delete-image')) {
+    console.log("pls work");
+    deleteBook();
+  }
+});
 
 // Book object constructor
 function Book(title, author, read) {
@@ -57,4 +64,8 @@ function render() {
     }
     libraryContainer.prepend(bookEl);
   }
+}
+
+function deleteBook() {
+  console.log('something');
 }

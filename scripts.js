@@ -6,7 +6,6 @@ const bookContainer = document.querySelector('.library-grid');
 submitNewBookBtn.addEventListener('click', addBookToLibrary);
 bookContainer.addEventListener('click', function(e) {
   if (e.target.classList.contains('delete-image')) {
-    console.log("pls work");
     deleteBook();
   }
 });
@@ -67,5 +66,5 @@ function render() {
 }
 
 function deleteBook() {
-  console.log('something');
+  event.target.parentNode.parentNode.remove();
 }

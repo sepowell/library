@@ -79,3 +79,15 @@ select {
 .book-author {
   font-style: italic;
 }
+
+.book-options-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delete-image {
+  height: 25px;
+  cursor: pointer;
+  margin-right: 20px;
+}

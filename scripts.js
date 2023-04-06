@@ -28,10 +28,33 @@ function render() {
     let book = myLibrary[i];
     let bookEl = document.createElement('div');
     bookEl.classList.add('book-container');
-    bookEl.innerHTML = `
+    if (book.read == 'Read') {
+      bookEl.innerHTML = `
       <h2 class="book-title">${book.title}</h2>
       <p class="book-author">${book.author}</p>
-      <p class="status">${book.read}</p>`;
-    libraryContainer.appendChild(bookEl);
+      <div class="book-options-container">
+          <div>
+            <select name="status" id="added-book-status">
+              <option value="read" selected>Read</option>
+              <option value="not read">Not Read</option>
+            </select>
+          </div>
+          <img class="delete-image" src="trash-can.svg">
+      </div>`;
+    } else {
+      bookEl.innerHTML = `
+      <h2 class="book-title">${book.title}</h2>
+      <p class="book-author">${book.author}</p>
+      <div class="book-options-container">
+          <div>
+            <select name="status" id="added-book-status">
+              <option value="read">Read</option>
+              <option value="not read" selected>Not Read</option>
+            </select>
+          </div>
+          <img class="delete-image" src="trash-can.svg">
+      </div>`;
+    }
+    libraryContainer.prepend(bookEl);
   }
 }

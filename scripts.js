@@ -10,13 +10,6 @@ bookContainer.addEventListener('click', function(e) {
   }
 });
 
-// Book object constructor
-function Book(title, author, read) {
-  this.title = title;
-  this.author = author; 
-  this.read = read;
-}
-
 function addBookToLibrary() {
   let title = document.querySelector('#title').value;
   let author = document.querySelector('#author').value;
@@ -25,6 +18,14 @@ function addBookToLibrary() {
   let newBook = new Book(title, author, read);
   myLibrary.push(newBook);
   render();
+}
+
+class Book{
+  constructor(title, author, read) {
+    this.title = title;
+    this.author = author;
+    this.read = read;
+  }
 }
 
 function render() {
